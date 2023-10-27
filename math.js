@@ -1,3 +1,5 @@
+console.group(`Cuadrado`)
+
 
 const ladoCuadrado = 5;
 const perimetroCuadrado = ladoCuadrado *4;
@@ -9,6 +11,17 @@ console.log({
     areaCuadrado
 })
 
+function cualcularCuadrado(lado) {
+    return {
+        perimetro: lado * 4,
+        area: lado * lado 
+    }
+}
+
+console.groupEnd(`Cuadrado`)
+
+
+console.group(`Triangulo`)
 
 const ladoTriangulo1 = 6;
 const ladoTriangulo2 = 6;
@@ -18,6 +31,13 @@ const alturaTriangulo = 5.5;
 const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + ladoTrianguloBase;
 const areaTriangulo = (ladoTrianguloBase * alturaTriangulo) / 2;
 
+function cualcularPerimetroTriangulo(lado1, lado2, base, altura) {
+    return {
+        perimetro: lado1 +lado2 + base,
+        area: (base * altura) /2
+    }
+}
+
 console.log({
     ladoTriangulo1,
     ladoTriangulo2,
@@ -26,3 +46,5 @@ console.log({
     perimetroTriangulo,
     areaTriangulo
 })
+
+console.groupEnd(`Triangulo`)
