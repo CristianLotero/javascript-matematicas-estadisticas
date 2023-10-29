@@ -38,6 +38,26 @@ function cualcularPerimetroTriangulo(lado1, lado2, base, altura) {
     }
 }
 
+function calcularAlturaTriangulo (lado1, base) {
+    if (lado1 == base) {
+        console.warn(`Este no es un triángulo isosceles`);
+    } else {
+        // h = raizcuadrada (lado1**2 - (b**2) / 4)
+        return altura = Math.sqrt((lado1 ** 2) - ((base ** 2)) / 4);
+        
+    }
+}
+
+
+
+function calcularAlturaTrianguloEscaleno(a, b, c) {
+    function calcularSemiperimetro (a, b, c) {
+        return ((a + b + c) / 2)
+    };
+    return altura = (2 / a) * Math.sqrt((calcularSemiperimetro(a, b, c) * (calcularSemiperimetro(a, b, c) - a) * (calcularSemiperimetro(a, b, c) - b) * (calcularSemiperimetro(a, b, c) - c)))
+}
+
+
 console.log({
     ladoTriangulo1,
     ladoTriangulo2,
