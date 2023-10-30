@@ -136,3 +136,20 @@ ___
 
 # ↓ <br>
 Cómo calcular porcentajes (6/30)
+
+```javascript
+let valorProducto = document.querySelector("#valorProducto");
+let porcentajeDescuento = document.querySelector("#porcentaje");
+const discountButton = document.querySelector("#discountButton");
+const outcome = document.querySelector(".outcome")
+
+discountButton.addEventListener("click", ()=>{
+
+    let numberValorProducto = Number(valorProducto.value);
+    let numberPorcentaje = Number(porcentajeDescuento.value);
+
+    let outcomeParse = (numberValorProducto*(100 - numberPorcentaje)/100);
+
+    outcome.innerHTML = `El Valor con el descuento aplicado es: $${outcomeParse}`;
+});
+```
