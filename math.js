@@ -95,14 +95,16 @@ function calcularCirculo (radio) {
 console.groupEnd(`Circle`)
 
 
-let valorProducto = document.querySelector(".input1").value;
-let porcentajeDescuento = document.querySelector(".input2").value;
+let valorProducto = document.querySelector("div.input1 input[id='valorProducto']");
+let porcentajeDescuento = document.querySelector("div.input2 input[id='Porcentaje']");
 const discountButton = document.querySelector("#discountButton");
 const outcome = document.querySelector(".outcome")
 
 discountButton.addEventListener("click", ()=>{
-    console.log(`Valor del producto: ${valorProducto}`)
-    console.log(`Porcentaje de descuento: ${porcentajeDescuento}`)
+    console.log(`Valor del producto: ${valorProducto}`);
+    console.log(valorProducto);
+    console.log(`Porcentaje de descuento: ${porcentajeDescuento}`);
+    console.log(porcentajeDescuento);
     let outcomeParse = (valorProducto * ( 100 - porcentajeDescuento))/100;
         outcome.innerHTML = `El resultado es ${outcomeParse}`
 });
