@@ -50,12 +50,6 @@ function calcularAlturaTriangulo (lado1, base) {
 
 
 
-function calcularAlturaTrianguloEscaleno(a, b, c) {
-    function calcularSemiperimetro (a, b, c) {
-        return ((a + b + c) / 2)
-    };
-    return altura = (2 / a) * Math.sqrt((calcularSemiperimetro(a, b, c) * (calcularSemiperimetro(a, b, c) - a) * (calcularSemiperimetro(a, b, c) - b) * (calcularSemiperimetro(a, b, c) - c)))
-}
 
 
 console.log({
@@ -99,3 +93,16 @@ function calcularCirculo (radio) {
 
 
 console.groupEnd(`Circle`)
+
+
+let valorProducto = document.querySelector(".input1").value;
+let porcentajeDescuento = document.querySelector(".input2").value;
+const discountButton = document.querySelector("#discountButton");
+const outcome = document.querySelector(".outcome")
+
+discountButton.addEventListener("click", ()=>{
+    console.log(`Valor del producto: ${valorProducto}`)
+    console.log(`Porcentaje de descuento: ${porcentajeDescuento}`)
+    let outcomeParse = (valorProducto * ( 100 - porcentajeDescuento))/100;
+        outcome.innerHTML = `El resultado es ${outcomeParse}`
+});

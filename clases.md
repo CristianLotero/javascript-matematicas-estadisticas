@@ -91,3 +91,48 @@ function calcularAlturaTrianguloEscaleno(a, b, c) {
     return altura = (2 / a) * Math.sqrt((calcularSemiperimetro(a, b, c) * (calcularSemiperimetro(a, b, c) - a) * (calcularSemiperimetro(a, b, c) - b) * (calcularSemiperimetro(a, b, c) - c)))
 }
 ```
+![test](https://i.imgur.com/TLYynOB.jpg)--->https://platzi.com/new-home/clases/3435-javascript-practico-matematicas/55618-playground-calcula-la-altura-de-un-triangulo-escal/
+
+# ↓
+
+Playground: Calcula la Altura de un Triángulo Escaleno (5/30)
+
+En este desafío debes calcular la altura sin decimales de un triángulo escaleno (todos sus lados son distintos) o false en caso de que los parámetros recibidos no cumplan los requisitos del triángulo escaleno.
+
+Input:
+
+* trianguloEscaleno(16,8,10)
+* strianguloEscaleno(6,6,6)
+
+Output:
+
+* 4
+* false
+
+---
+```javascript
+export function solution(a, b, c) {
+  if (a != b && b != c && c != a) {
+    function calcularSemiperimetro(a, b, c) {
+      return ((a + b + c) / 2)
+    };
+    return Math.floor((2 / a) * Math.sqrt((calcularSemiperimetro(a, b, c) * (calcularSemiperimetro(a, b, c) - a) * (calcularSemiperimetro(a, b, c) - b) * (calcularSemiperimetro(a, b, c) - c))))
+  } else {
+    return false
+  }
+}
+```
+# ↓
+
+# Exitoso
+
+___
+___
+>*Domingo 29/10/23*
+___
+___
+
+![video](https://i.imgur.com/Hi9CAsr.png)--->https://platzi.com/new-home/clases/3435-javascript-practico-matematicas/51504-como-calcular-porcentajes/
+
+# ↓ <br>
+Cómo calcular porcentajes (6/30)

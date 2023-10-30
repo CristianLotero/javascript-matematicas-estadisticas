@@ -6,11 +6,30 @@
     <title>Document</title>
 </head>
 <body>
+    <style type="text/css">
+        button {position: absolute; left: 100px; margin: 50px;}
+        button:hover{background-color: rgb(136, 236, 181);}
+        button:active{background-color: rgb(27, 182, 53); box-shadow:inset 5px 5px 2px -3px rgb(42, 236, 123);}
+        input, button {border-radius: 8px; font-size: 1.5rem;}
+        .outcomeBox {height: 70px; width: 140px;border: solid black 2px dotted; }
+    </style>
     <h1>Taller de Matemáticas con JavaScript</h1>
     <p>
         Aprende a trabajar con matemáticas usando código javaScript en <a href="https://platzi.com/jsmath">platzi.com/jsmath</a>
-
     </p>
+    <br>
+    <div class="input1">
+        <p>Ingrese el valor del producto: <input type="number" id="valorProducto"></p>
+    </div>
+    <div class="input2">
+        <p>Ingrese el porcentaje de descuento: <input type="number" id="porcentaje"></p>
+    </div>
+    <button id="discountButton">generar descuento</button>
+    <div class="outcomeBox">
+        <p class="outcome"></p>
+    </div>
+
+
     <script src="./math.js"></script>
 </body>
 </html>
