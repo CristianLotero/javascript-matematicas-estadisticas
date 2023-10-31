@@ -153,3 +153,30 @@ discountButton.addEventListener("click", ()=>{
     outcome.innerHTML = `El Valor con el descuento aplicado es: $${outcomeParse}`;
 });
 ```
+___
+___
+>*Lunes 30/10/23*
+___
+___
+
+
+![video](https://i.imgur.com/Hi9CAsr.png)--->https://platzi.com/new-home/clases/3435-javascript-practico-matematicas/51505-calculando-descuentos-con-javascript/
+
+# └---> Calculando descuentos con JavaScript (7/30)
+
+* Condicionales para restringir campos sin completar, y porcentaje mayor a 100%: <br>
+
+```javascript
+      if (!numberValorProducto || !numberPorcentaje) {
+        outcome.innerHTML = `No se ha ingresado ningun valor`;
+        return
+    }
+    
+    if (numberPorcentaje > 100) {
+        outcome.innerHTML = `No se puede ingresar descuento superior a 100%`;
+        return
+    }
+```
+
+# RETO-EJERCICIO:
+*realizar un `<input>` que acepte cupones para validar descuentos.

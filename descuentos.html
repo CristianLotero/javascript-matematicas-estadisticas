@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo calcular precios con descuentos</title>
+
+</head>
+<body>
+    <h1>Cómo calcular precios con descuentos</h1>
+    <br>
+    <style type="text/css">
+        button {position: absolute; left: 100px; bottom: 50%; margin: 50px;}
+        button:hover{background-color: rgb(136, 236, 181);}
+        button:active{background-color: rgb(27, 182, 53); box-shadow:inset 5px 5px 2px -3px rgb(42, 236, 123);}
+        input, button {border-radius: 8px; font-size: 1.5rem;}
+        .outcomeBox {border: 2px solid  black; height: 70px; width: 140px; ; }
+        #cupon {border: 2px solid green; height: 50px; width: 150px; min-width: fit-content;justify-content: center; margin: 30px;}
+    </style>
+    <label for="valorProducto">Precio orginal de tu producto:</label>
+    <div class="input1">
+        <input type="number" id="valorProducto">
+    </div>
+    <br>
+    <label for="porcentaje">Descuento de tu producto:</label>
+    <div class="input2">
+        <input type="number" id="porcentaje">
+    </div>
+    <br>
+    <label for="cupon">Ingrese cupon de descuento</label>
+    <div class="cupon">
+        <input type="text" id="cupon">
+    </div>
+    <button id="discountButton">generar descuento</button>
+    <div class="outcomeBox">
+        <p class="outcome"></p>
+    </div>
+
+    <script src="./descuentos.js"></script>
+</body>
+</html>
