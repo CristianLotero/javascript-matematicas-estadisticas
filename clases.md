@@ -180,3 +180,12 @@ ___
 
 # RETO-EJERCICIO:
 *realizar un `<input>` que acepte cupones para validar descuentos.
+
+___
+___
+>*Martes 31/10/23*
+___
+___
+
+# RETO-EJERCICIO:
+*realizar un `<input>` que acepte cupones para validar descuentos.
