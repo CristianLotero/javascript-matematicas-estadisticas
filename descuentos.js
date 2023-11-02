@@ -30,10 +30,7 @@ discountButton.addEventListener("click", ()=>{
     } else {
         sugerencia = "No se pierda los descuentos haciendose socio!!";
     }
-    console.log(cuponString === "DESCUENTAZO50");
-    console.log(`El campo de cupon tiene como valor : ${cupon.value}`);
-    console.log(`"cuponString" tiene como valor : ${cuponString}`);
-    console.log(`"numberPorcentaje" tiene como valor : ${numberPorcentaje}`);
+
     outcomeParse = (numberValorProducto*(100 - numberPorcentaje)/100);
     outcome.innerHTML = `El Valor con el descuento aplicado es: $${outcomeParse}  ${sugerencia}`;
 

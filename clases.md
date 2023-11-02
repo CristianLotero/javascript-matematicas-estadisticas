@@ -232,8 +232,13 @@ discountButton.addEventListener("click", ()=>{
 ```
 ___
 ___
->*Miercoles 01/11/23*
+>*Jueves 01/11/23*
 ___
 ___
 
-![video](https://i.imgur.com/Hi9CAsr.png)--->https://platzi.com/new-home/clases/3435-javascript-practico-matematicas/51505-calculando-descuentos-con-javascript/
+![video](https://i.imgur.com/Hi9CAsr.png)--->https://platzi.com/new-home/clases/3435-javascript-practico-matematicas/51506-cupones-de-descuento/
+
+└---> Cupones de descuento (8/30)
+
+# RETO-EJERCICIO:
+* Guardar en un array u objeto la clave-valor de los cupones y los descuentos, y encontrar forma de validar a partir de ese array/objeto.
