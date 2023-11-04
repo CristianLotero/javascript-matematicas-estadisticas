@@ -6,6 +6,8 @@ let cuponString;
 const discountButton = document.querySelector("#discountButton");
 const outcome = document.querySelector(".outcome");
 
+let totalCouponObj = {};
+
 discountButton.addEventListener("click", () => {
     const numberValorProducto = Number(valorProducto.value);
     let outcomeParse;
@@ -13,9 +15,10 @@ discountButton.addEventListener("click", () => {
 });
 
 function createRandomCoupon (cantidad, palabra) {
-    let totalCouponObj = {};
-        for (cantidad in totalCouponObj) {
-            
+
+    for (cantidad in totalCouponObj) {
+        // let nombre
+        // totalCouponObj
     }
 }
 
