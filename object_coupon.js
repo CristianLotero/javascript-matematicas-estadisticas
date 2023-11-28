@@ -6,7 +6,7 @@ let cuponString;
 const discountButton = document.querySelector("#discountButton");
 const outcome = document.querySelector(".outcome");
 
-let totalCouponObj = {
+const totalCouponObj = {
     anioNuevo: 20,
     carnaval: 20,
     diaDeLaMujer: 30,
@@ -21,8 +21,9 @@ let totalCouponObj = {
 
 discountButton.addEventListener("click", () => {
     const numberValorProducto = Number(valorProducto.value);
-    let outcomeParse;
-    let numberPorcentaje = 0;
+    let parseCupon = () => {
+        if (cupon.value == totalCouponObj.)
+    }
 });
 
 
