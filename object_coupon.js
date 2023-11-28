@@ -6,7 +6,18 @@ let cuponString;
 const discountButton = document.querySelector("#discountButton");
 const outcome = document.querySelector(".outcome");
 
-let totalCouponObj = {};
+let totalCouponObj = {
+    anioNuevo: 20,
+    carnaval: 20,
+    diaDeLaMujer: 30,
+    malvinas: 30,
+    invierno: 40, 
+    independencia: 50,
+    diaDelNinio: 30,
+    primavera: 40,
+    diaDeLaMadre: 50,
+    finDeAnioDeLocula: 70
+};
 
 discountButton.addEventListener("click", () => {
     const numberValorProducto = Number(valorProducto.value);
@@ -14,13 +25,8 @@ discountButton.addEventListener("click", () => {
     let numberPorcentaje = 0;
 });
 
-function createRandomCoupon (cantidad, palabra) {
 
-    for (cantidad in totalCouponObj) {
-        // let nombre
-        // totalCouponObj
-    }
-}
+
 
 
 
