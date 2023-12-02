@@ -58,7 +58,6 @@ discountButton.addEventListener("click", () => {
     let numberValorProducto = Number(valorProducto.value);
     let parseCupon = () => {
         found = totalCouponObj.find(element => element.cupon == cupon.value);
-        console.log(found);
     }
     parseCupon();
     
