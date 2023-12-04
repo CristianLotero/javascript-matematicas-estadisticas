@@ -63,7 +63,7 @@ discountButton.addEventListener("click", () => {
     
     let resultado = numberValorProducto * ((100 - found.descuento) / 100);
 
-    outcome.innerText = `El resultado es ${resultado}`;
+    outcome.innerText = `El precio con el descuento es ${resultado}`;
 });
 
 
