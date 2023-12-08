@@ -1,14 +1,14 @@
 
-let arrayPrecios = [12, 76, 83, 50, 29, 35, 84, 96, 78 , 9, 24]
-
+let arrayPrecios = [12, 76, 283, 505, 29, 35, 842, 96, 778 , 9, 240]
+let arrayPrecios2 = [4566, 3216546, 6546126, 658554]
+let total = 0;
 let promedio = (valores) => {
-    let total = 0;
-    function suma(valores) {
-        for (element in valores) {
-            total += element;
-        }
+    for (let element of valores) {
+        total += element;
+        console.log(total)
     }
-    return total/2
+    return (total / valores.length)
 }
 
 console.log(promedio(arrayPrecios))
+console.log(promedio(arrayPrecios2))
