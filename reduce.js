@@ -15,7 +15,6 @@ let promedio = (valores) => {
     const totalReduce = valores.reduce(sumarTodosLosElementos)
     console.log(totalReduce);
     return totalReduce / valores.length;
-
 }
 
 
