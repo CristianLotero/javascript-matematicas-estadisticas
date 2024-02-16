@@ -28,17 +28,19 @@ function esParOImpar(lista) {
 
 function calcularMediana(lista) {
 
-    if(!esParOImpar(lista)) {
+    let listaOrdenada = lista.sort((a,b) => a - b)
+    console.log(listaOrdenada)
+    if(!esParOImpar(listaOrdenada)) {
         const indexMitadListaPar = [];
-        indexMitadListaPar.push(lista.length / 2 - 1);
-        indexMitadListaPar.push(lista.length / 2);
-        const medianaListaPar = [lista[indexMitadListaPar[0]],lista[indexMitadListaPar[1]]];
+        indexMitadListaPar.push(listaOrdenada.length / 2 - 1);
+        indexMitadListaPar.push(listaOrdenada.length / 2);
+        const medianaListaPar = [listaOrdenada[indexMitadListaPar[0]],listaOrdenada[indexMitadListaPar[1]]];
         // console.log(indexMitadListaPar);
         // console.log(medianaListaPar);
         return promedio(medianaListaPar);
     } else {
-        const indexMitadListaImpar = Math.floor(lista.length / 2);
-        const medianaListaImpar = lista[indexMitadListaImpar]
+        const indexMitadListaImpar = Math.floor(listaOrdenada.length / 2);
+        const medianaListaImpar = listaOrdenada[indexMitadListaImpar]
         // console.log(indexMitadListaImpar);
         // console.log(medianaListaImpar);
         return medianaListaImpar;
@@ -46,6 +48,16 @@ function calcularMediana(lista) {
 }
 
 
+function calcularModa(arr) {
+    function findModa(alement,index,array) {
+        let orderedArr = array.sort((a,b)=>a-b);
+        for (alement of orderedArr) {
+            
+        }
+    }
+    let newArr = arr.
+}
 
-// Calcular los 2 elementos de la mitad de una lista par (para calcular la mediana)
+
+
 
