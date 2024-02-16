@@ -52,11 +52,13 @@ function calcularModa(arr) {
     function findModa(alement,index,array) {
         let orderedArr = array.sort((a,b)=>a-b);
         for (alement of orderedArr) {
-            
+
         }
     }
     let newArr = arr.
 }
+
+
 
 
 
