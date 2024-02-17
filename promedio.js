@@ -49,14 +49,16 @@ function calcularMediana(lista) {
 
 
 function calcularModa(arr) {
-    function findModa(alement,index,array) {
-        let orderedArr = array.sort((a,b)=>a-b);
-        for (alement of orderedArr) {
+        let orderedArr = arr.sort((a,b)=>a-b);
 
-        }
+        orderedArr.forEach((element, index, arr) => {
+            if (element === arr[index + 1]){
+            }
+        });
     }
-    let newArr = arr.
-}
+
+
+
 
 
 
