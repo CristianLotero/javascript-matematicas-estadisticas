@@ -49,18 +49,24 @@ function calcularMediana(lista) {
 
 function calcularModa(arr) {
     let orderedArr = arr.sort((a,b)=>a-b);
+    console.log(orderedArr)
     let modaCounter = 0;
+    let actualCounter = 0;
     let moda;
-    function recursiveCounter([element, index, arr, counter]) {
-        counter += 1;
+    function recursiveCounter(element, index, arr) {
+        actualCounter += 1;
         if (element !== arr[index + 1]) {
-            if (counter > modaCounter){
-                return moda = element;
+            console.log(actualCounter)
+            if (actualCounter > modaCounter){
+                modaCounter = actualCounter;
+                moda = element;
             }
+            actualCounter = 0;
         }
-        recursiveCounter([element, index, arr, counter])
+        
     }
-    orderedArr.forEach(recursiveCounter(arr[element],index,arr,modaCounter)) 
+    orderedArr.forEach((element,index,arr) => recursiveCounter(element,index,arr)); 
+    return (`la moda de este array es: ${moda}`);
 }
 
 
