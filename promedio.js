@@ -1,4 +1,3 @@
-
 // let arrayPrecios = [12, 76, 283, 505, 29, 35, 842, 96, 778 , 9, 240]
 // let arrayPrecios2 = [4566, 3216546, 6546126, 658554]
 
@@ -49,13 +48,20 @@ function calcularMediana(lista) {
 
 
 function calcularModa(arr) {
-        let orderedArr = arr.sort((a,b)=>a-b);
-
-        orderedArr.forEach((element, index, arr) => {
-            if (element === arr[index + 1]){
+    let orderedArr = arr.sort((a,b)=>a-b);
+    let modaCounter = 0;
+    let moda;
+    function recursiveCounter([element, index, arr, counter]) {
+        counter += 1;
+        if (element !== arr[index + 1]) {
+            if (counter > modaCounter){
+                return moda = element;
             }
-        });
+        }
+        recursiveCounter([element, index, arr, counter])
     }
+    orderedArr.forEach(recursiveCounter(arr[element],index,arr,modaCounter)) 
+}
 
 
 
