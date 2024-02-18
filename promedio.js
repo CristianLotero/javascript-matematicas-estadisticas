@@ -47,13 +47,13 @@ function calcularMediana(lista) {
 }
 
 
-function calcularModa(arr) {
+function calcularModaSinObjeto(arr) {
     let orderedArr = arr.sort((a,b)=>a-b);
     console.log(orderedArr)
     let modaCounter = 0;
     let actualCounter = 0;
     let moda;
-    function recursiveCounter(element, index, arr) {
+    function counter(element, index, arr) {
         actualCounter += 1;
         if (element !== arr[index + 1]) {
             console.log(actualCounter)
@@ -65,12 +65,26 @@ function calcularModa(arr) {
         }
         
     }
-    orderedArr.forEach((element,index,arr) => recursiveCounter(element,index,arr)); 
+    orderedArr.forEach((element,index,arr) => counter(element,index,arr)); 
     return (`la moda de este array es: ${moda}`);
 }
 
 
+function calcularModaPlatzi(lista) {
+    const listaCount = {};
 
+    for (let i = 0; i < lista.length; i++) {
+        const elemento = lista[i];
+
+        if(listaCount[elemento]){
+        listaCount[elemento] += 1;
+        }else{
+        listaCount[elemento] = 1;
+        }
+    }
+
+    console.log(listaCount);
+}
 
 
 
