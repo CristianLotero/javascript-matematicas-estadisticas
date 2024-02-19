@@ -83,10 +83,19 @@ function calcularModaPlatzi(lista) {
         }
     }
 
-    console.log(listaCount);
+    // console.log(listaCount)
+    const listaArray = Object.entries(listaCount);
+    // console.log(listaArray);
+    console.log(`Y ahora la lista ordenada: `)
+    console.log(ordenarListaBidimensional(listaArray));
+    // console.log(`la moda de la lista es: `)
+    // console.log(listaArray[listaArray.length - 1]);
 }
 
-
+function ordenarListaBidimensional(lista) {
+    let listaOrdenada = lista.sort((a,b) => a[1]-b[1]);
+    return listaOrdenada;
+}
 
 
 
