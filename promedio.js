@@ -98,11 +98,16 @@ function ordenarListaBidimensional(lista) {
 }
 
 function mediaTruncada(arr,discard) {
+    const copyOfArr = [...arr];
+    copyOfArr.sort();
+    
+    const arrAlreadyDiscarded = [...copyOfArr];
+    arrAlreadyDiscarded.pop()
+    arrAlreadyDiscarded.shift();
 
-    const arrCopy = Array.from(arr);
-    arrCopy.sort();
-    console.log(arr);
-    console.log(arrCopy);
+    console.log(copyOfArr);
+    console.log(arrAlreadyDiscarded);
+    
 }
 
 
