@@ -97,6 +97,12 @@ function ordenarListaBidimensional(lista) {
     return listaOrdenada;
 }
 
+function mediaTruncada(arr,discard) {
 
+    const arrCopy = Array.from(arr);
+    arrCopy.sort();
+    console.log(arr);
+    console.log(arrCopy);
+}
 
 
