@@ -100,14 +100,24 @@ function ordenarListaBidimensional(lista) {
 function mediaTruncada(arr,discard) {
     const copyOfArr = [...arr];
     copyOfArr.sort();
-    
-    const arrAlreadyDiscarded = [...copyOfArr];
-    arrAlreadyDiscarded.pop()
-    arrAlreadyDiscarded.shift();
 
+    const valuesToDiscard = (arr.length * discard / 100)/2;
+    console.log(valuesToDiscard);
+
+    
+    ruleOutExtremes(Math.round(valuesToDiscard),copyOfArr)
+
+    console.log(arr);
     console.log(copyOfArr);
-    console.log(arrAlreadyDiscarded);
     
 }
 
+function ruleOutExtremes(times,arr){
+    let codeBlock= () => {
+        arr.pop();
+        arr.shift();
+        return ruleOutExtremes((times - 1),arr);
+    }
+    return !times ? undefined : codeBlock(times,arr);  
+}
 
