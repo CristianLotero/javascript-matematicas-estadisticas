@@ -100,16 +100,11 @@ function ordenarListaBidimensional(lista) {
 function mediaTruncada(arr,discard) {
     const copyOfArr = [...arr];
     copyOfArr.sort();
-
     const valuesToDiscard = (arr.length * discard / 100)/2;
-    console.log(valuesToDiscard);
-
-    
+ 
     ruleOutExtremes(Math.round(valuesToDiscard),copyOfArr)
-
-    console.log(arr);
-    console.log(copyOfArr);
-    
+    console.log(copyOfArr)
+    console.log(copyOfArr.reduce((total,element)=>element += total)/copyOfArr.length)
 }
 
 function ruleOutExtremes(times,arr){
