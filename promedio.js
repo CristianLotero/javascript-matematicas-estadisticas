@@ -101,6 +101,8 @@ function mediaTruncada(arr,discard) {
     const copyOfArr = [...arr];
     copyOfArr.sort();
     const valuesToDiscard = (arr.length * discard / 100)/2;
+    console.log(valuesToDiscard)
+    console.log(copyOfArr)
  
     ruleOutExtremes(Math.round(valuesToDiscard),copyOfArr)
     console.log(copyOfArr)
@@ -108,11 +110,11 @@ function mediaTruncada(arr,discard) {
 }
 
 function ruleOutExtremes(times,arr){
-    let codeBlock= () => {
+    let recursiveRuleOut= () => {
         arr.pop();
         arr.shift();
         return ruleOutExtremes((times - 1),arr);
     }
-    return !times ? undefined : codeBlock(times,arr);  
+    return !times ? undefined : recursiveRuleOut(times,arr);  
 }
 
