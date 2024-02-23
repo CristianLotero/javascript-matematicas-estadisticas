@@ -1,7 +1,17 @@
+
+class Platzi {
+    static esImpar() {}
+    static esPar() {}
+    static esLoQueQuereSer() {}
+}
+
+const PlatziMath = {}
+
+
 // let arrayPrecios = [12, 76, 283, 505, 29, 35, 842, 96, 778 , 9, 240]
 // let arrayPrecios2 = [4566, 3216546, 6546126, 658554]
 
-let promedio = (valores) => {
+PlatziMath.promedio = (valores) => {
     let total = 0;
     for (let element of valores) {
         total += element;
@@ -20,12 +30,12 @@ let promedio = (valores) => {
 
 // console.log(moduloDe(10,2.34))
 
-function esParOImpar(lista) {
+PlatziMath.esParOImpar = function esParOImpar(lista) {
     return (lista.length % 2);
 }
 
 
-function calcularMediana(lista) {
+PlatziMath.calcularMediana = function calcularMediana(lista) {
 
     let listaOrdenada = lista.sort((a,b) => a - b)
     console.log(listaOrdenada)
@@ -47,7 +57,7 @@ function calcularMediana(lista) {
 }
 
 
-function calcularModaSinObjeto(arr) {
+PlatziMath.calcularModaSinObjeto = function calcularModaSinObjeto(arr) {
     let orderedArr = arr.sort((a,b)=>a-b);
     console.log(orderedArr)
     let modaCounter = 0;
@@ -92,12 +102,12 @@ function calcularModaPlatzi(lista) {
     // console.log(listaArray[listaArray.length - 1]);
 }
 
-function ordenarListaBidimensional(lista) {
+PlatziMath.ordenarListaBidimensional = function ordenarListaBidimensional(lista) {
     let listaOrdenada = lista.sort((a,b) => a[1]-b[1]);
     return listaOrdenada;
 }
 
-function mediaTruncada(arr,discard) {
+PlatziMath.mediaTruncada = function mediaTruncada(arr,discard) {
     const copyOfArr = [...arr];
     copyOfArr.sort();
     const valuesToDiscard = (arr.length * discard / 100)/2;
@@ -109,7 +119,7 @@ function mediaTruncada(arr,discard) {
     console.log(copyOfArr.reduce((total,element)=>element += total)/copyOfArr.length)
 }
 
-function ruleOutExtremes(times,arr){
+PlatziMath.ruleOutExtremes = function ruleOutExtremes(times,arr){
     let recursiveRuleOut= () => {
         arr.pop();
         arr.shift();
@@ -118,3 +128,4 @@ function ruleOutExtremes(times,arr){
     return !times ? undefined : recursiveRuleOut(times,arr);  
 }
 
+ 
