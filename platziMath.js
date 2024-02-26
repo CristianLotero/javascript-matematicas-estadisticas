@@ -5,6 +5,26 @@ class Platzi {
     static esLoQueQuereSer() {}
 }
 
+const colorize = (...args) => ({
+    black: `\x1b[30m${args.join(' ')}`,
+    red: `\x1b[31m${args.join(' ')}`,
+    green: `\x1b[32m${args.join(' ')}`,
+    yellow: `\x1b[33m${args.join(' ')}`,
+    blue: `\x1b[34m${args.join(' ')}`,
+    magenta: `\x1b[35m${args.join(' ')}`,
+    cyan: `\x1b[36m${args.join(' ')}`,
+    white: `\x1b[37m${args.join(' ')}`,
+    bgBlack: `\x1b[40m${args.join(' ')}\x1b[0m`,
+    bgRed: `\x1b[41m${args.join(' ')}\x1b[0m`,
+    bgGreen: `\x1b[42m${args.join(' ')}\x1b[0m`,
+    bgYellow: `\x1b[43m${args.join(' ')}\x1b[0m`,
+    bgBlue: `\x1b[44m${args.join(' ')}\x1b[0m`,
+    bgMagenta: `\x1b[45m${args.join(' ')}\x1b[0m`,
+    bgCyan: `\x1b[46m${args.join(' ')}\x1b[0m`,
+    bgWhite: `\x1b[47m${args.join(' ')}\x1b[0m`
+  });
+
+
 const PlatziMath = {}
 
 
@@ -37,16 +57,17 @@ PlatziMath.esParOImpar = function esParOImpar(lista) {
 
 PlatziMath.calcularMediana = function calcularMediana(lista) {
 
-    let listaOrdenada = lista.sort((a,b) => a - b)
+    let listaOrdenada = [...lista]
+    listaOrdenada.sort((a,b) => a - b)
     console.log(listaOrdenada)
-    if(!esParOImpar(listaOrdenada)) {
+    if(!PlatziMath.esParOImpar(listaOrdenada)) {
         const indexMitadListaPar = [];
         indexMitadListaPar.push(listaOrdenada.length / 2 - 1);
         indexMitadListaPar.push(listaOrdenada.length / 2);
         const medianaListaPar = [listaOrdenada[indexMitadListaPar[0]],listaOrdenada[indexMitadListaPar[1]]];
         // console.log(indexMitadListaPar);
         // console.log(medianaListaPar);
-        return promedio(medianaListaPar);
+        return PlatziMath.promedio(medianaListaPar);
     } else {
         const indexMitadListaImpar = Math.floor(listaOrdenada.length / 2);
         const medianaListaImpar = listaOrdenada[indexMitadListaImpar]
@@ -80,7 +101,7 @@ PlatziMath.calcularModaSinObjeto = function calcularModaSinObjeto(arr) {
 }
 
 
-function calcularModaPlatzi(lista) {
+PlatziMath.calcularModaPlatzi = function calcularModaPlatzi(lista) {
     const listaCount = {};
 
     for (let i = 0; i < lista.length; i++) {
@@ -97,7 +118,7 @@ function calcularModaPlatzi(lista) {
     const listaArray = Object.entries(listaCount);
     // console.log(listaArray);
     console.log(`Y ahora la lista ordenada: `)
-    console.log(ordenarListaBidimensional(listaArray));
+    console.log(PlatziMath.ordenarListaBidimensional(listaArray));
     // console.log(`la moda de la lista es: `)
     // console.log(listaArray[listaArray.length - 1]);
 }
@@ -114,8 +135,8 @@ PlatziMath.mediaTruncada = function mediaTruncada(arr,discard) {
     console.log(valuesToDiscard)
     console.log(copyOfArr)
  
-    ruleOutExtremes(Math.round(valuesToDiscard),copyOfArr)
-    console.log(copyOfArr)
+    PlatziMath.ruleOutExtremes(Math.round(valuesToDiscard),copyOfArr)
+    console.log(colorize(copyOfArr).bgYellow)
     console.log(copyOfArr.reduce((total,element)=>element += total)/copyOfArr.length)
 }
 
