@@ -2,9 +2,6 @@ console.log(salarios)
 
 // Analisis personal para Juanita
 
-
-
-
 function encontrarPersona(personaEnBusqueda) {
     return salarios.find((persona) => persona.name == personaEnBusqueda);
 }
@@ -22,4 +19,9 @@ function medianaPorPersona(nombrePersona) {
     
 
     return medianaSalarios
+}
+
+
+function proyeccionSalarial() {
+    
 }
