@@ -22,6 +22,16 @@ function medianaPorPersona(nombrePersona) {
 }
 
 
-function proyeccionSalarial() {
+function proyeccionSalarial(nombrePersona) {
+    const trabajos = encontrarPersona(nombrePersona).trabajos;
+    console.log(trabajos)
+    const salarios = trabajos.map((elemento) => elemento.salario);
+    console.log(salarios)
     
+    const x = [];
+    for (let index in salarios) {
+        x.push(index);
+    }
+
+    console.log(x)
 }
