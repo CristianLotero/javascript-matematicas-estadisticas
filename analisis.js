@@ -39,7 +39,7 @@ function proyeccionSalarial(nombrePersona) {
     const Ey = y.reduce((total,current)=> total + current);
     const Exy = xy.reduce((total,current)=> total + current);
     const Ex2 = x2.reduce((total,current)=> total + current);
-    
+
     const b = ((n * Exy) - (Ex * Ey))/((n * Ex2) - (Ex**2)) 
     const a = (Ey - b * Ex) / n
     let nextY = (a + b * (x.length +1)).toFixed(2) 
@@ -68,3 +68,18 @@ function proyeccionPorPersona(nombrePersona) {
     console.log(nuevoSalarioPersona.toFixed(2))
 }
 
+// Analisis empresarial
+
+/*{
+    Industria Mokepon: {
+        2018: [salario,salario,salario]
+        2019:
+        2025:
+        2026:
+    },
+    
+
+}
+
+
+*/
