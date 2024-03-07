@@ -62,13 +62,12 @@ function proyeccionPorPersona(nombrePersona) {
     console.log(porcentajesCrecimiento)
 
     const medianaPorcentajesCrecimiento = PlatziMath.calcularMediana(porcentajesCrecimiento);
-    // console.log(porcentajesCrecimiento, medianaPorcentajesCrecimiento)
-    // console.log(salariosPersona)  
     const nuevoSalarioPersona = trabajos[trabajos.length -1].salario * (1 + medianaPorcentajesCrecimiento)
     console.log(nuevoSalarioPersona.toFixed(2))
 }
 
 // Analisis empresarial
+// Crear un OBJ que contenga ELEMENTS ; como KEY cada una de las empresas (en las cuales han trabajado las personas), y como VALUE un OBJ que contenga (como KEY) los años, y como VALUE un ARRAY que contenga ARRAYs con los salarios de cada persona.
 
 /*{
     Industria Mokepon: {
@@ -77,9 +76,18 @@ function proyeccionPorPersona(nombrePersona) {
         2025:
         2026:
     },
-    
+}
+*/
+
+const empresas = {};
+
+function empresasFill (array) {
+    if (!alreadyExists) {
+
+    }
 
 }
 
+function alreadyExists () {
 
-*/
+}
