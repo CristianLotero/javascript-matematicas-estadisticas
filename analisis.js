@@ -76,6 +76,10 @@ function proyeccionPorPersona(nombrePersona) {
         2025:
         2026:
     },
+    Otra Empresa0: {};
+    Otra Empresa1: {};
+    Otra Empresa2: {};
+    Otra Empresa3: {};
 }
 */
 
