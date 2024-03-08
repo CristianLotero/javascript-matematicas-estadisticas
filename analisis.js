@@ -82,12 +82,12 @@ function proyeccionPorPersona(nombrePersona) {
 const empresas = {};
 
 function empresasFill (array) {
-    if (!alreadyExists) {
+    if (!alreadyExists(array)) {
 
     }
 
 }
 
-function alreadyExists () {
-
+function alreadyExists (array) {
+    return array.
 }
