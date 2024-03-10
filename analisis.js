@@ -67,7 +67,7 @@ function proyeccionPorPersona(nombrePersona) {
 }
 
 // Analisis empresarial
-// Crear un OBJ que contenga ELEMENTS ; como KEY cada una de las empresas (en las cuales han trabajado las personas), y como VALUE un OBJ que contenga (como KEY) los años, y como VALUE un ARRAY que contenga ARRAYs con los salarios de cada persona.
+// Crear un OBJ que contenga ELEMENTS ; como KEY cada una de las empresas (en las cuales han trabajado las personas, por cada año), y como VALUE un OBJ que contenga (como KEY) los años, y como VALUE un ARRAY que contenga ARRAYs con los salarios de cada persona.
 
 /*{
     Industria Mokepon: {
@@ -85,13 +85,24 @@ function proyeccionPorPersona(nombrePersona) {
 
 const empresas = {};
 
-function empresasFill (array) {
-    if (!alreadyExists(array)) {
+// utilizar arr.filter() para filtrar si hay existencia de la empresa
+// function empresasFill (arr) {
+//     if (!alreadyExists(arr)) {
 
+//     }
+
+// }
+
+function alreadyExists (arr) {
+    for (persona of arr) {
+        let personaTrabajos = persona.trabajos;
+        for (trabajo of personaTrabajos){
+            empresas[trabajo.empresa] = {}; 
+            const empresa = empresas[trabajo.empresa];
+            empresa[trabajo.year] = [];
+            empresa[trabajo.year].push(trabajo.salario);
+            // empresas[trabajo.empresa].trabajo[trabajo.year].push(personaTrabajos.salario)
+        }
     }
-
-}
-
-function alreadyExists (array) {
-    return array.
+    console.log(empresas)
 }
