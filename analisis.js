@@ -83,15 +83,20 @@ function proyeccionPorPersona(nombrePersona) {
 }
 */
 
-const empresas = {};
 
 // utilizar arr.filter() para filtrar si hay existencia de la empresa
 // function empresasFill (arr) {
-//     if (!alreadyExists(arr)) {
+    //     if (!alreadyExists(arr)) {
+        
+        //     }
+        
+    // }
 
-//     }
 
-// }
+
+
+const empresas = {}
+
 
 function alreadyExists (arr) {
     for (persona of arr) {
@@ -100,8 +105,11 @@ function alreadyExists (arr) {
             empresas[trabajo.empresa] = {}; 
             const empresa = empresas[trabajo.empresa];
             empresa[trabajo.year] = [];
-            empresa[trabajo.year].push(trabajo.salario);
-            // empresas[trabajo.empresa].trabajo[trabajo.year].push(personaTrabajos.salario)
+            const cadaAnioDeLaEmpresa = empresa[trabajo.year];
+            cadaAnioDeLaEmpresa.push(trabajo.salario);
+            console.log(`este es el salario: ${trabajo.salario} de ${persona.name} dentro de la  empresa: ${trabajo.empresa} en el año: ${[trabajo.year]}`);
+            // console.log(cadaAnioDeLaEmpresa)
+
         }
     }
     console.log(empresas)
