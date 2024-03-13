@@ -99,17 +99,26 @@ const empresas = {}
 
 
 function alreadyExists (arr) {
-    for (persona of arr) {
+    for (let persona of arr) {
         const personaTrabajos = persona.trabajos;
-        for (trabajo of personaTrabajos){
+        for (let trabajo of personaTrabajos){
             empresas[trabajo.empresa] = {}; 
-            // const empresa = empresas[trabajo.empresa];
-            // empresa[trabajo.year] = [];
-            // const cadaAnioDeLaEmpresa = empresa[trabajo.year];
-            // cadaAnioDeLaEmpresa.push(trabajo.salario);
-            // console.log(`este es el salario: ${trabajo.salario} de ${persona.name} dentro de la  empresa: ${trabajo.empresa} en el año: ${[trabajo.year]}`);
+            let actualYear = trabajo.year;
+            console.log(actualYear)
+            if (!empresas[trabajo.empresa].hasOwnProperty('trabajo.year')) {
+                empresas[trabajo.empresa][actualYear] = []
+            }
+            empresas[trabajo.empresa][actualYear].push(trabajo.salario)
+            console.log(empresas[trabajo.empresa][actualYear])
+
+            }
+
 
         }
-    }
     console.log(empresas)
 }
+
+// function fillWithSalarios(actualYear) {
+//     let year = actualYear;
+//     return this.year;
+// }
