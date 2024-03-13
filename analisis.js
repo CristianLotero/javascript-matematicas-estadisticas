@@ -103,15 +103,11 @@ function alreadyExists (arr) {
         const personaTrabajos = persona.trabajos;
         for (trabajo of personaTrabajos){
             empresas[trabajo.empresa] = {}; 
-            const empresa = empresas[trabajo.empresa];
-            empresa[trabajo.year] = [];
-            const cadaAnioDeLaEmpresa = empresa[trabajo.year];
-            cadaAnioDeLaEmpresa.push(trabajo.salario);
-            console.log(`este es el salario: ${trabajo.salario} de ${persona.name} dentro de la  empresa: ${trabajo.empresa} en el año: ${[trabajo.year]}`);
-            console.warn(trabajo.salario)
-            console.warn(cadaAnioDeLaEmpresa)
-            console.warn(empresa)
-            // console.log(cadaAnioDeLaEmpresa)
+            // const empresa = empresas[trabajo.empresa];
+            // empresa[trabajo.year] = [];
+            // const cadaAnioDeLaEmpresa = empresa[trabajo.year];
+            // cadaAnioDeLaEmpresa.push(trabajo.salario);
+            // console.log(`este es el salario: ${trabajo.salario} de ${persona.name} dentro de la  empresa: ${trabajo.empresa} en el año: ${[trabajo.year]}`);
 
         }
     }
