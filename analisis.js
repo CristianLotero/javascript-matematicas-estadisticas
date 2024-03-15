@@ -96,34 +96,27 @@ function proyeccionPorPersona(nombrePersona) {
 
 
 const empresas = {
-    fillWithSalarios: function(anio, salario) {
-        empresas[anio].push(salario); 
+    fillWithSalarios: function(trabajo, anio, salario) {
+        return this[trabajo][anio].push(salario); 
     }
 };
 
 
 function alreadyExists (arr) {
-    for (let persona of arr) {
+    for (persona of arr) {
         const personaTrabajos = persona.trabajos;
-        for (let trabajo of personaTrabajos){
-            empresas[trabajo.empresa] = {}; 
-            // let actualYear = trabajo.year;
-            // console.log(actualYear)
+        for ( trabajo of personaTrabajos){
+            if (!empresas.hasOwnProperty('trabajo.empresa')){
+                console.log(`creando ${trabajo.empresa}`)
+                empresas[trabajo.empresa] = {}; 
+            }
             if (!empresas[trabajo.empresa].hasOwnProperty('trabajo.year')) {
-                empresas[trabajo.empresa][trabajo.year] = []
-                empresas.fillWithSalarios(trabajo.year, trabajo.salario);
+                console.log(`creando ${trabajo.empresa} ${trabajo.year}`)
+                empresas[trabajo.empresa][trabajo.year] = [];
             }
-            empresas[trabajo.empresa][actualYear].push(trabajo.salario)
-            console.log(empresas[trabajo.empresa][actualYear])
-
-            }
-
-
+            empresas.fillWithSalarios(trabajo.empresa, trabajo.year, trabajo.salario);
         }
+    }
     console.log(empresas)
 }
 
-// function fillWithSalarios(salario) {
-
-//     return this;
-// }
