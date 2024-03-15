@@ -95,7 +95,11 @@ function proyeccionPorPersona(nombrePersona) {
 
 
 
-const empresas = {}
+const empresas = {
+    fillWithSalarios: function(anio, salario) {
+        empresas[anio].push(salario); 
+    }
+};
 
 
 function alreadyExists (arr) {
@@ -103,10 +107,11 @@ function alreadyExists (arr) {
         const personaTrabajos = persona.trabajos;
         for (let trabajo of personaTrabajos){
             empresas[trabajo.empresa] = {}; 
-            let actualYear = trabajo.year;
-            console.log(actualYear)
+            // let actualYear = trabajo.year;
+            // console.log(actualYear)
             if (!empresas[trabajo.empresa].hasOwnProperty('trabajo.year')) {
-                empresas[trabajo.empresa][actualYear] = []
+                empresas[trabajo.empresa][trabajo.year] = []
+                empresas.fillWithSalarios(trabajo.year, trabajo.salario);
             }
             empresas[trabajo.empresa][actualYear].push(trabajo.salario)
             console.log(empresas[trabajo.empresa][actualYear])
@@ -118,7 +123,7 @@ function alreadyExists (arr) {
     console.log(empresas)
 }
 
-// function fillWithSalarios(actualYear) {
-//     let year = actualYear;
-//     return this.year;
+// function fillWithSalarios(salario) {
+
+//     return this;
 // }
