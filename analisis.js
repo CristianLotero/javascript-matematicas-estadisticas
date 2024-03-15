@@ -106,13 +106,14 @@ function alreadyExists (arr) {
     for (persona of arr) {
         const personaTrabajos = persona.trabajos;
         for ( trabajo of personaTrabajos){
-            if (!empresas.hasOwnProperty('trabajo.empresa')){
+            if (!empresas.hasOwnProperty([trabajo.empresa])){
                 console.log(`creando ${trabajo.empresa}`)
-                empresas[trabajo.empresa] = {}; 
+                empresas[trabajo.empresa] = a = {}; 
             }
-            if (!empresas[trabajo.empresa].hasOwnProperty('trabajo.year')) {
-                console.log(`creando ${trabajo.empresa} ${trabajo.year}`)
-                empresas[trabajo.empresa][trabajo.year] = [];
+            if (!a.hasOwnProperty([trabajo.year])) {
+                console.log(`creando ${trabajo.empresa} ${trabajo.year}`);
+                a[trabajo.year] = [];
+                console.log(a[trabajo.year]);
             }
             empresas.fillWithSalarios(trabajo.empresa, trabajo.year, trabajo.salario);
         }
