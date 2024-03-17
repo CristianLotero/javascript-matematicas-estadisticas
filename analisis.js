@@ -106,18 +106,35 @@ function alreadyExists (arr) {
     for (persona of arr) {
         const personaTrabajos = persona.trabajos;
         for ( trabajo of personaTrabajos){
-            if (!empresas.hasOwnProperty([trabajo.empresa])){
-                console.log(`creando ${trabajo.empresa}`)
-                empresas[trabajo.empresa] = a = {}; 
+            let trabajoEmpresaString = [trabajo.empresa].toString()
+            let trabajoYearString = trabajo.year.toString()
+            if (!empresas.hasOwnProperty(trabajoEmpresaString)){
+                console.warn(`creando ${trabajoEmpresaString}`)
+                empresas[trabajoEmpresaString] = {}; 
             }
-            if (!a.hasOwnProperty([trabajo.year])) {
-                console.log(`creando ${trabajo.empresa} ${trabajo.year}`);
-                a[trabajo.year] = [];
-                console.log(a[trabajo.year]);
+            if (!empresas[trabajoEmpresaString].hasOwnProperty(trabajoYearString)) {
+                console.log(`creando ${trabajoEmpresaString} ${trabajoYearString}`);
+                empresas[trabajoEmpresaString][trabajoYearString] = [];
+                console.log(empresas[trabajoYearString]);
             }
-            empresas.fillWithSalarios(trabajo.empresa, trabajo.year, trabajo.salario);
+            empresas.fillWithSalarios(trabajoEmpresaString, trabajoYearString, trabajo.salario);
         }
     }
     console.log(empresas)
 }
 
+function empresasDataCount(obj) {
+
+    const copyOfObj = [...obj]
+    for (empresa in copyOfObj) {
+        const yearSalaryAcc = [];
+        for (year in empresa) {
+            const copyOfYear = [...year]
+            copyOfYear.reduce((total, el) => total = el / el );
+            yearSalaryAcc.push(copyOfYear);
+
+        }
+    }
+    yearSalaryAcc.reduce((total, el) => total = el / el );
+    console.log(copyOfObj)
+}
